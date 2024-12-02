@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P3-M17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+        }
+        .activity {
+            margin-bottom: 20px;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function updateActivities() {
+            const selectedTime = document.getElementById('class-time').value;
+            const activity2 = document.getElementById('activity-2');
+            const step6Activity4 = document.getElementById('activity-4-step-6');
+
+            if (selectedTime === '45') {
+                if (activity2) activity2.style.display = 'none';
+                if (step6Activity4) step6Activity4.style.display = 'block';
+            } else if (selectedTime === '40') {
+                if (activity2) activity2.style.display = 'none';
+                if (step6Activity4) step6Activity4.style.display = 'none';
+            } else {
+                if (activity2) activity2.style.display = 'block';
+                if (step6Activity4) step6Activity4.style.display = 'block';
+            }
+
+            document.getElementById('selected-time').innerText = `Tiempo efectivo de clase: ${selectedTime} minutos`;
+        }
+
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook-P3-M17</h1>
+    </div>
+    <div class="container">
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateActivities()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_mision')">
+        <div class="title">🔍 Actividad 0: Revisión de Misión</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Verificar que están disponibles las computadoras/tablets con Scratch abierto.
+        </div>
+    </div>
+    <div id="revision_mision" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1:</strong> Proyectar Diapositiva 1 y verificar que están disponibles las computadoras/tablets con Scratch abierto.</td>
+                <td style="padding: 10px; vertical-align: top;">No aplica</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('saludo_ritual')">
+        <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club ⏰ Tiempo: 2.5 minutos</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Bienvenida, agradecimiento, y presentación de objetivos del día.
+        </div>
+    </div>
+    <div id="saludo_ritual" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0.5 minutos):</strong> Proyectar Diapositiva 2 con el logotipo de Gnius Club.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Hola, Genios! 🌟 Hoy vamos a emprender una misión de programación colaborativa en Scratch. ¿Están listos para crear juntos videojuegos increíbles? ¡Prepárense para una aventura que pondrá a prueba su creatividad y trabajo en equipo!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Proyectar Diapositiva 3 con nuevas poses para medir el estado de ánimo.</td>
+                <td style="padding: 10px; vertical-align: top;">"Antes de empezar, quiero saber cómo se sienten hoy. Si se sienten con mucha energía, levanten ambos brazos hacia arriba como si estuvieran estirándose. Si están un poco cansados o necesitan apoyo, crúcense los brazos sobre el pecho. ¡No se preocupen, estamos aquí para ayudarnos!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0.5 minutos):</strong> Proyectar Diapositiva 4 para guiar a los estudiantes en el ritual.</td>
+                <td style="padding: 10px; vertical-align: top;">"Juntamos nuestras manos y decimos: '¡Gracias por estar aquí, Genios! Hoy será un día genial de programación colaborativa y mucha diversión en Scratch.'"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0.5 minutos):</strong> Proyectar Diapositiva 5 "Objetivos de la Misión" y leer los objetivos en voz alta.</td>
+                <td style="padding: 10px; vertical-align: top;">"Hoy tenemos dos grandes objetivos en nuestra misión: 1. Completar el programa de videojuegos colaborativos usando variables y condicionales. 2. Trabajar en equipo para resolver desafíos y completar un videojuego increíble en Scratch."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('brain_vitamin')">
+        <div class="title">🧠 Actividad 2: Brain Vitamin ⏰ Tiempo: 2.5 minutos</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Activar el cerebro con ejercicios rápidos para pensar como programadores.
+        </div>
+    </div>
+    <div id="brain_vitamin" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0.5 minutos):</strong> Proyectar Diapositiva 6 "Gimnasia Cerebral".</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Genios! Antes de empezar a programar, vamos a activar nuestros cerebros. Vamos a hacer un ejercicio mental rápido para prepararnos para pensar como programadores. ¿Están listos? ¡Vamos a activar nuestros cerebros programadores!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Proyectar Diapositiva 7 con los pasos del ejercicio de manos cruzadas.</td>
+                <td style="padding: 10px; vertical-align: top;">"Primero, vamos a hacer el ejercicio de 'manos cruzadas'. Tomen su mano derecha y toquen su rodilla izquierda, luego lo mismo con la otra mano. Repitan esta secuencia rápidamente. Esto nos ayudará a pensar con ambos lados del cerebro, como cuando trabajamos con variables y condicionales."</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1 minuto):</strong> Proyectar Diapositiva 8 con instrucciones de condicionales.</td>
+                <td style="padding: 10px; vertical-align: top;">"Ahora vamos a hacer un ejercicio mental. Si digo 'Sol', ustedes levantan la mano derecha. Si digo 'Lluvia', levantan la izquierda. ¿Listos? Vamos a hacerlo más rápido: Sol, Lluvia, Sol, Sol, Lluvia. ¡Vamos a practicar como si fueran condicionales en Scratch!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('team_gnius')">
+        <div class="title">🤝 Actividad 3: Team Gnius ⏰ Tiempo: 10 minutos</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Trabajar en parejas utilizando el sistema Buddy System para desarrollar y revisar proyectos.
+        </div>
+    </div>
+    <div id="team_gnius" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0.5 minutos):</strong> Proyectar Diapositiva 9: Explicar el Buddy System donde los estudiantes alternarán los roles de tutor y aprendiz.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Genios! Hoy trabajaremos en equipos utilizando el Buddy System. Un compañero será el tutor, ayudando al otro a programar el sistema de puntuación para el videojuego que hicieron la clase pasada. Luego, intercambiarán roles."</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (0.5 minutos):</strong> Proyectar Diapositiva 10: Temporizador de 30 segundos para que los estudiantes se organicen en equipos.</td>
+                <td style="padding: 10px; vertical-align: top;">"Tienen 30 segundos para organizarse en parejas. ¡Rápido, que el tiempo corre!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0.5 minutos):</strong> Proyectar Diapositiva 11: Dar la instrucción para que un estudiante de cada equipo recoja las Magic Tablets.</td>
+                <td style="padding: 10px; vertical-align: top;">"Uno de ustedes debe recoger las Magic Tablets. ¡Recuerden, solo uno por equipo!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0.5 minutos):</strong> Proyectar Diapositiva 12: Temporizador de 30 segundos para que los estudiantes recojan las Magic Tablets.</td>
+                <td style="padding: 10px; vertical-align: top;">"Tienen 30 segundos para recoger las Magic Tablets. ¡Rápido, que el tiempo corre!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 5 (4 minutos):</strong> Proyectar Diapositiva 13: Dar 4 minutos para que el tutor realice el esquema de paper programming del sistema de puntuación en la Magic Tablet mientras el aprendiz observa y hace preguntas.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Es hora de que el tutor tome la Magic Tablet y diseñe el sistema de puntuación que vamos a agregar al videojuego! El aprendiz observará y colaborará, haciendo preguntas y sugiriendo ideas. ¡Trabajen juntos como un equipo de genios!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;" id="activity-3-step-6">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 6 (0.5 minutos):</strong> Proyectar Diapositiva 14: Temporizador de 30 segundos para el intercambio de roles.</td>
+                <td style="padding: 10px; vertical-align: top;">"Es hora de intercambiar roles. El tutor se convierte en aprendiz y viceversa. ¡Tienen 30 segundos para hacer el cambio!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 7 (4 minutos):</strong> Proyectar Diapositiva 15: Dar 4 minutos para que el nuevo tutor realice el paper programming del sistema de puntuación mientras el aprendiz anterior observa y colabora.</td>
+                <td style="padding: 10px; vertical-align: top;">"Ahora el nuevo tutor tomará la Magic Tablet y continuará con el sistema de puntuación. El aprendiz estará a su lado observando y sugiriendo ideas para que funcione perfectamente en su videojuego."</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 8 (0.5 minutos):</strong> No requiere diapositiva.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Genios! El tiempo para el Buddy System ha terminado. Ahora que ya tienen su sistema de puntuación diseñado, vamos a empezar con los Challenges. ¡Prepárense para una aventura de programación!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">🚀 Actividad 4: Challenge ⏰ Tiempo: 30 minutos</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Resolución de desafíos prácticos para implementar variables y condicionales en Scratch.
+        </div>
+    </div>
+    <div id="challenge" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0.5 minutos):</strong> Proyectar Diapositiva 16: Portada del Challenge.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Genios! Ahora es el momento de poner en práctica todo lo que hemos aprendido. Hoy vamos a trabajar en equipo y enfrentarnos a un desafío en Scratch. ¡Es su turno para brillar y crear un videojuego increíble usando variables y condicionales!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Proyectar Diapositiva 17: Descripción sintetizada de los Challenges (<strong>Rookie</strong>, <strong>Master</strong>, <strong>Hacker</strong>).</td>
+                <td style="padding: 10px; vertical-align: top;">"Tienen tres niveles de desafíos para elegir.<br><br>
+                <strong>Rookie: Sistema de Puntuación Básico:</strong> Cada equipo debe agregar un sistema de puntuación a su videojuego. Los personajes ganarán puntos al atrapar objetos y perderán puntos al interactuar con ciertos obstáculos. Los estudiantes deberán implementar variables que mantengan el conteo de puntos y mostrar esa puntuación en pantalla de manera clara para los jugadores.<br><br>
+                <strong>Master: Puntuación y Múltiples Niveles:</strong> Los equipos deben agregar múltiples niveles a su videojuego. La dificultad aumentará con cada nivel: más objetos, mayor velocidad o nuevos obstáculos. Para avanzar de nivel, los personajes deberán alcanzar una cantidad específica de puntos. Cuando se llegue a esa puntuación, el juego deberá cargar automáticamente el siguiente nivel.<br><br>
+                <strong>Hacker: Controles Personalizados y Puntuación Global:</strong> El desafío para los equipos será integrar controles personalizados que permitan a los jugadores cambiar la configuración de las teclas para moverse o realizar acciones dentro del juego. Además, deberán agregar un sistema de puntuación global, donde el puntaje del jugador se mantenga y se compare entre niveles, y finalmente, implementar un “ranking” o tabla de clasificación para comparar los mejores puntajes."</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0.5 minutos):</strong> Proyectar Diapositiva 18: Temporizador de 30 segundos para la elección de nivel.</td>
+                <td style="padding: 10px; vertical-align: top;">"Tienen 30 segundos para decidir qué nivel prefieren. ¡Elijan bien y prepárense para su desafío en equipo!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0.5 minutos):</strong> Proyectar Diapositiva 19: Instrucción para recoger las computadoras/tablets.</td>
+                <td style="padding: 10px; vertical-align: top;">"Un integrante de cada equipo debe recoger las computadoras o tablets con Scratch abierto. ¡Es hora de empezar a programar!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 5 (20 minutos):</strong> Proyectar Diapositiva 21: Temporizador de 20 minutos para que los estudiantes trabajen en su Challenge.</td>
+                <td style="padding: 10px; vertical-align: top;">"Tienen 20 minutos para desarrollar su proyecto en Scratch. ¡Trabajen en equipo, usen bien las variables y condicionales, y, sobre todo, disfruten programando!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;" id="activity-4-step-6">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 6 (5 minutos):</strong> Proyectar Diapositiva 22: Temporizador de 5 minutos para probar y ajustar los proyectos.</td>
+                <td style="padding: 10px; vertical-align: top;">"Ahora que han terminado de programar, es momento de probar su juego. Verifiquen que todo funcione bien y ajusten si es necesario. ¡Recuerden que la precisión en variables y condicionales es clave!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 7 (2 minutos):</strong> Proyectar Diapositiva 23: Preguntas de reflexión sobre los desafíos.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Gran trabajo, genios! Ahora reflexionemos un poco. ¿Qué parte del desafío fue la más difícil para su equipo? ¿Cómo lo resolvieron juntos? ¿Qué harían de manera diferente si tuvieran más tiempo?"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 8 (0.5 minutos):</strong> No requiere diapositiva.</td>
+                <td style="padding: 10px; vertical-align: top;">"El Challenge ha terminado. ¡Felicidades por el gran trabajo en equipo!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('honor_dojo')">
+        <div class="title">🏅 Actividad 5: Honor de Dojo ⏰ Tiempo: 2.5 minutos</div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Reflexión final y organización del espacio de trabajo para cerrar con respeto y orden.
+        </div>
+    </div>
+    <div id="honor_dojo" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0.5 minutos):</strong> Proyectar Diapositiva 24: Revisión de los objetivos alcanzados.</td>
+                <td style="padding: 10px; vertical-align: top;">"¡Genios! Hoy hemos trabajado en equipo, enfrentando desafíos de programación con Scratch. Ahora quiero que pensemos: ¿Hemos logrado nuestros objetivos? 1. Programar videojuegos con variables y condicionales. 2. Colaborar en equipo para resolver problemas complejos. ¡Gran trabajo en todo lo que hemos hecho hoy!"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (0.5 minutos):</strong> Reconocimiento de logros colectivos.</td>
+                <td style="padding: 10px; vertical-align: top;">"Hoy no solo hemos creado videojuegos, ¡hemos trabajado como un equipo increíble! El éxito de nuestro desafío se debe a la colaboración, a la comunicación y al esfuerzo colectivo. ¡Felicidades a todos por su gran trabajo en equipo!"</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1.5 minutos):</strong> Proyectar Diapositiva 25: Animación sobre la organización del espacio de trabajo.</td>
+                <td style="padding: 10px; vertical-align: top;">"Como parte del Honor de Dojo, ahora vamos a dejar nuestro espacio de trabajo limpio y organizado, tal como lo encontramos. ¡Un verdadero genio siempre respeta su área de trabajo!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+    </div> <!-- Cierre del container -->
+
+    <!-- Scripts adicionales -->
+    <script>
+        // Aquí puedes agregar más scripts si es necesario
+    </script>
+</body>
+</html>
+
